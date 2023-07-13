@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/tasks', 'App\Http\Controllers\Api\TaskController@index');
+Route::post('/tasks', 'App\Http\Controllers\Api\TaskController@store')->name('tasks');
+
